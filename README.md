@@ -1,5 +1,7 @@
 # darknode-client
 
+![Security Badge](https://img.shields.io/badge/security-responsible_disclosure-111111?style=flat-square)
+
 Decentralized compute client for the Darknode ecosystem.  
 Deterministic local execution, secure task handling and operator-side infrastructure layer.
 
@@ -100,5 +102,12 @@ Full reproducible build instructions will be added when the first preview build 
 
 Released under the **MIT License**.  
 See [`LICENSE`](LICENSE).
+
+---
+
+**Darknode Trust Foundation**  
+Security · Integrity · Verification  
+https://darknode.tech
+
 
 ---
