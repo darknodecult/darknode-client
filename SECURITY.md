@@ -1,147 +1,121 @@
-# 🔐 Darknode Security Policy
+# Security Policy
 
-This document describes how to report vulnerabilities, how we handle responsible disclosure, and how to verify the integrity of Darknode software releases.
-
-Darknode is committed to providing a secure environment for all home operators, developers, and enterprise users. Security researchers are highly encouraged to test, audit, and analyze our systems.
+Security and reliability are core requirements of the Darknode ecosystem.  
+We welcome all responsible disclosures and will respond to every valid report.
 
 ---
 
-# 🛡️ 1. Reporting a Security Vulnerability
+## Supported Versions
 
-If you discover a vulnerability in any Darknode component (client, operator tools, API infrastructure, website, backend logic, or documentation), please report it responsibly and privately.
+Because this client is under active development, only the **latest release** is supported for security reports.
 
-### 📬 **Primary Security Contact**
+```
+✔ Latest version (supported)
+✘ Older versions (not supported)
+✘ Forks / modified builds (not supported)
+```
+
+---
+
+## Reporting a Vulnerability
+
+If you discover a security issue, please report it responsibly.
+
+### 📬 Contact (preferred)
 ```
 security@darknode.tech
 ```
 
-### 🔑 PGP Public Key
-Fingerprint (40 hex characters):
+Encrypted reports are preferred.  
+Public PGP key (Build & Security Key):
+
+➡️ `docs/KEYS/DARKNODE_BUILD.asc`  
+➡️ Fingerprint: **D5B4 67C1 4447 AC02 A76E  BC77 52A3 8DDA 6F8D 664F**
+
+### 🛡 GitHub Security Advisories (recommended)
+You may also report via:
 
 ```
-D5B4 67C1 4447 AC02 A76E  BC77 52A3 8DDA 6F8D 664F
+GitHub → Security → Advisories → New draft advisory
 ```
 
-Full ASCII-armored key:
-```
-https://github.com/darknode-tech/darknode-client/blob/main/docs/KEYS/DARKNODE_BUILD.asc
-```
+---
 
-Please **encrypt all vulnerability reports** using the build system public key.
+## What to Include in Your Report
+
+Please include (when possible):
+
+1. Description of the issue  
+2. Steps to reproduce  
+3. Expected vs. actual behavior  
+4. Potential impact  
+5. Any PoC (proof-of-concept)  
+6. Your environment (OS, architecture, version)
+
+We will **never** request sensitive information, private keys, or wallets.
 
 ---
 
-# 🧭 2. Scope of Responsible Disclosure
+## Coordinated Disclosure
 
-### In Scope:
-- Darknode Client (Windows/Linux/macOS)
-- Darknode Operator Layer
-- DARE Execution Layer
-- DRE Runtime Engine
-- AIGO Optimization systems
-- Darknode API endpoints
-- darknode.tech + related web properties
-- Release verification files (signatures/hashes)
+We follow a standard *coordinated disclosure process*:
 
-### Out of Scope:
-- Social engineering against community members
-- Physical attacks on infrastructure you do not own
-- Node misconfiguration caused by user modification
-- 3rd-party software not maintained by Darknode
-- Cloud infrastructure owned by hosting providers
+1. Acknowledge the report within 48–72h  
+2. Assess severity  
+3. Prepare a fix  
+4. Issue a patched release  
+5. Public disclosure after patch → researcher is optionally credited
 
 ---
 
-# 🕒 3. Expected Response Timeline
+## Hall of Fame (future)
 
-- **Initial acknowledgement:** within **48 hours**
-- **Triage & classification:** within **5 days**
-- **Fix preparation:** depends on severity
-- **Coordinated disclosure:** arranged individually
-
-Critical vulnerabilities may receive accelerated handling.
-
----
-
-# 🎁 4. Rewards / Bug Bounties
-
-Darknode does not currently operate a monetary bug bounty program.  
-However, high-value findings will receive:
-
-- 🌟 **Hall of Fame listing**
-- 🥇 Priority access to early releases
-- 🔧 Direct communication channel with the core team
-
-When funding becomes available, researchers who contributed early will be prioritized.
-
----
-
-# 🔍 5. Verifying Darknode Releases
-
-All official builds are signed by:
-
-**Darknode Build System <security@darknode.tech>**
-
-Use our verification guide for detailed instructions:
-
-➡ **VERIFYING_DOWNLOADS.md**
-
-Users MUST verify both:
-
-1. SHA256 checksums  
-2. GPG signatures
-
-This ensures authenticity and integrity.
-
----
-
-# ⚔️ 6. Coordinated Vulnerability Disclosure (CVD)
-
-Darknode follows industry-standard CVD processes:
-
-1. Researcher sends encrypted report.
-2. We respond within the defined window.
-3. Researcher and Darknode collaborate on patching.
-4. Optional coordinated release date.
-5. Public advisories may be published for severe issues.
-
-We **never** pursue legal action against good-faith researchers.
-
----
-
-# 🧑‍💻 7. Security Hall of Fame (reserved)
-
-This section is reserved for future contributors who responsibly disclose verified security issues.
-
-- (empty for now)
-
----
-
-# 🧱 8. Trust Model Summary
-
-Darknode uses:
-
-- PGP-signed releases  
-- Hash verification  
-- Reproducible build plans (progressively rolled out)  
-- Transparent open documentation  
-- Minimal external dependencies  
-- No telemetry in the home operator client  
-
-For details see:
-
-➡ `TRUST_MODEL.md`
-
----
-
-# 🙏 Thank You
-
-We deeply appreciate the work of security researchers, ethical hackers, and technical auditors who help secure decentralized systems.
-
-If in doubt, always contact:
+Valid security researchers may be listed in a future:
 
 ```
-security@darknode.tech
+/docs/HALL_OF_FAME.md
 ```
 
-Encrypted reports are strongly recommended.
+The page is currently empty, but prepared for future contributions.
+
+---
+
+## Integrity & Verification
+
+All releases must be verified before execution.
+
+See:  
+✔ **[`VERIFYING_DOWNLOADS.md`](VERIFYING_DOWNLOADS.md)**  
+✔ **[`docs/KEYS/DARKNODE_BUILD.asc`](docs/KEYS/DARKNODE_BUILD.asc)**  
+✔ **[`TRUST_MODEL.md`](TRUST_MODEL.md)**
+
+---
+
+## Scope
+
+Reports we *do* accept:
+
+- Remote code execution  
+- Sandbox escapes  
+- Signature / integrity bypass  
+- Supply chain vulnerabilities  
+- Privilege escalation  
+- Verification flaws  
+- Network protocol vulnerabilities  
+- Dangerous default configurations  
+
+Reports we *do not* accept:
+
+- Social engineering  
+- Self-inflicted misconfiguration  
+- Outdated OS / malware on operator systems  
+- Non-security bugs  
+- Requests for private financial information
+
+---
+
+## Final Notes
+
+Thank you for helping secure Darknode.  
+Distributed compute networks rely on strong, transparent and open security processes.
+
